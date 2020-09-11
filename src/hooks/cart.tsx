@@ -90,11 +90,15 @@ const CartProvider: React.FC = ({ children }) => {
           : product,
       );
 
-      setProducts(newProducts);
+      const newProductsChecked = newProducts.filter(
+        product => product.quantity !== 0,
+      );
+
+      setProducts(newProductsChecked);
 
       await AsyncStorage.setItem(
         '@GoMarketplace:product',
-        JSON.stringify(newProducts),
+        JSON.stringify(newProductsChecked),
       );
     },
     [products],

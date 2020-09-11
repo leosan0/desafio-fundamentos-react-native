@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
+import { useNavigation } from '@react-navigation/native';
+
 import { View } from 'react-native';
 
 import {
@@ -23,9 +25,11 @@ import {
   SubtotalValue,
 } from './styles';
 
-import { useCart, addToCart } from '../../hooks/cart';
+import { useCart } from '../../hooks/cart';
 
 import formatValue from '../../utils/formatValue';
+
+import FloatingCart from '../../components/FloatingCart';
 
 interface Product {
   id: string;
@@ -37,6 +41,13 @@ interface Product {
 
 const Cart: React.FC = () => {
   const { increment, decrement, products } = useCart();
+
+  const navigation = useNavigation();
+
+  console.log(products);
+  if (products.length === 0) {
+    navigation.navigate('Dashboard');
+  }
 
   function handleIncrement(id: string): void {
     increment(id);
@@ -112,6 +123,7 @@ const Cart: React.FC = () => {
           )}
         />
       </ProductContainer>
+      {/* <FloatingCart /> */}
       <TotalProductsContainer>
         <FeatherIcon name="shopping-cart" color="#fff" size={24} />
         <TotalProductsText>{`${totalItensInCart} itens`}</TotalProductsText>
