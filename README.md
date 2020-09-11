@@ -52,4 +52,3 @@ Project under MIT license. See [LICENSE](LICENSE) for further details.
 
 ---
 
-by Rocketseat :wave: 
