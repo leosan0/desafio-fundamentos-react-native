@@ -23,15 +23,24 @@
   <a href="#memo-licença">License</a>
 </p>
 
+
 ## :rocket: About 
 
 Challenge applied in GoStack Bootcamp.  
 Application GoMarketplace developed using React Native with TypeScript, Routes, Async Storage and Context API. 
 
+
+## Installation
+
+Execute the following command on your terminal:
+```js
+  yarn 
+```
+
 ### Using fake API
 
 Data provived by a fake API.
-Para executar esse servidor você pode executar o seguinte comando:
+To execute it, execute the following command on your terminal:
 
 ```js
   yarn json-server server.json -p 3333
