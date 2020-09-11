@@ -30,7 +30,7 @@ Challenge applied in GoStack Bootcamp.
 Application GoMarketplace developed using React Native with TypeScript, Routes, Async Storage and Context API. 
 
 
-## Installation
+### Installation
 
 Execute the following command on your terminal:
 ```js
