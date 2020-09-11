@@ -43,4 +43,4 @@ Project under MIT license. See [LICENSE](LICENSE) for further details.
 
 ---
 
-Feito com 💜 by Rocketseat :wave: 
+by Rocketseat :wave: 
